@@ -1,4 +1,4 @@
-## ReKotlin
+## ReKotlin (PGA Fork)
 
 [![License MIT](https://img.shields.io/badge/license-MIT-blue.svg?style=flat-square)](https://github.com/ReSwift/ReSwift/blob/master/LICENSE.md)
 [![Build Status](https://travis-ci.org/ReKotlin/ReKotlin.svg?branch=master)](https://travis-ci.org/ReKotlin/ReKotlin)
@@ -7,6 +7,23 @@
 Port of [ReSwift](https://github.com/ReSwift/ReSwift) to Kotlin, which corresponds to [ReSwift/4.0.0](https://github.com/ReSwift/ReSwift/releases/tag/4.0.0)
 
 ## Introduction
+
+This is a fork of the ReKotlin library. The purpose of this fork is to allow us to publish the package to [PGA's GitHub Packages](https://github.com/orgs/pgahq/packages?repo_name=ReKotlin-PGA-Fork). The Android upgame package at [upgame_video_analysis/android](https://github.com/pgahq/coach-tools-mobile-frontend/tree/main/upgame_video_analysis/android) is dependent on this package. The package was previously hosted by JCenter, which was completely shut down as detailed [here](https://jfrog.com/blog/jcenter-sunset/).
+
+## Publishing New Versions
+
+To publish a new version:
+
+1. Ensure you have set `gpr.user` and `gpr.token` values in a `local.properties` file.
+2. The `local.properties` file should be in the root directory and contain:
+   ```
+   gpr.user=<your_github_username>
+   gpr.token=<your_github_token>
+   ```
+3. Run the following command to publish:
+   ```
+   ./gradlew clean build publish
+   ```
 
 ReKotlin is a [Redux](https://github.com/reactjs/redux)-like implementation of the unidirectional data flow architecture in Kotlin. ReKotlin helps you to separate three important concerns of your app's components:
 
