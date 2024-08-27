@@ -1,2 +1,2 @@
-rootProject.name = 'rekotlin'
-
+rootProject.name = 'rekotlin2'
+include ':ReKotlin2'
